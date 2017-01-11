@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+	
+	<script >
+		
+		var arreglo = [];
+
+			var persona =  {
+								nombreCompleto:"Pedro Mora",
+								edad:25,
+								telefono:"2282147823"
+						   }
+
+ 			arreglo.push(persona);
+
+ 			console.log(arreglo);
+
+
+				$.ajax(
+				{
+			          type: "POST",
+			          url: "ejemploEnvio.php",
+			          data: {dato1:arreglo,dato2:"dato2"},
+			          success: function(result)
+					          {
+					            console.log(result);
+					          }
+		          
+		        });
+
+
+	</script>
+
+</body>
+</html>
